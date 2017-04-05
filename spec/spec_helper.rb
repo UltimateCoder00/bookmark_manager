@@ -1,6 +1,8 @@
 require 'capybara/rspec'
 require './app/app'
 require './app/models/link'
+require './app/models/tag'
+require './app/models/user'
 require 'database_cleaner'
 
 ENV['RACK_ENV'] = 'test'
