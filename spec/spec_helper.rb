@@ -4,6 +4,7 @@ require './app/models/link'
 require './app/models/tag'
 require './app/models/user'
 require 'database_cleaner'
+require_relative 'helpers/session'
 
 ENV['RACK_ENV'] = 'test'
 
@@ -41,6 +42,8 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  config.include SessionHelpers
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
