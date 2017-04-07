@@ -4,7 +4,7 @@ feature 'User sign in' do
     User.create(email: 'test@test.com', password: 'password', password_confirmation: 'password')
   end
 
-  scenario 'Signing in' do
+  scenario 'with correct credentials' do
     sign_in(email: 'test@test.com',   password: 'password')
     expect(page).to have_content "Welcome, 'test@test.com'"
   end
