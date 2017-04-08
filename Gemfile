@@ -5,14 +5,16 @@ ruby '2.4.0'
 # gem "rails"
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
-gem 'dm-migrations'
-gem 'rspec'
-gem 'capybara'
 gem 'sinatra'
+gem 'sinatra-partial'
 gem 'rake'
 gem 'rack'
-gem 'database_cleaner'
 gem 'bcrypt'
 gem 'sinatra-flash'
-gem 'dm-core'
-gem 'dm-validations'
+
+group :test do
+  gem 'byebug'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'rspec'
+end
